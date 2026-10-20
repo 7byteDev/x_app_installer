@@ -12,15 +12,10 @@
     <ApplicationIcon>Assets\XAppInstaller.ico</ApplicationIcon>
     <Title>X App Installer</Title>
     <Product>X App Installer</Product>
-    <Company>Ã–zgÃ¼r Ulusoy</Company>
-    <Authors>Ã–zgÃ¼r Ulusoy</Authors>
-    <Version>1.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <InformationalVersion>1.0</InformationalVersion>
-    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Company>Özgür Ulusoy</Company>
+    <Authors>Özgür Ulusoy</Authors>
     <Description>Windows application installer and dependency manager. Website: https://7byte.dev</Description>
-    <Copyright>Copyright Â© 2026 Ã–zgÃ¼r Ulusoy</Copyright>
+    <Copyright>Copyright © 2026 Özgür Ulusoy</Copyright>
     <PackageProjectUrl>https://7byte.dev</PackageProjectUrl>
     <NeutralLanguage>en</NeutralLanguage>
     <AssemblyTitle>X App Installer</AssemblyTitle>

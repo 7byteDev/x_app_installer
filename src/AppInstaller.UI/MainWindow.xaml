@@ -10,7 +10,7 @@
   <Grid ColumnSpacing="14">
    <Grid.ColumnDefinitions><ColumnDefinition Width="60"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
    <Viewbox Width="40" Height="48" HorizontalAlignment="Right" VerticalAlignment="Center" AutomationProperties.Name="X logo"><Path Width="40" Height="48" Stretch="Uniform" Fill="#168FFF" Data="M0,0 L12,0 L20,15 L28,0 L40,0 L26,24 L40,48 L28,48 L20,33 L12,48 L0,48 L14,24 Z"/></Viewbox>
-   <StackPanel x:Name="HeaderDrag" Grid.Column="1" VerticalAlignment="Center"><TextBlock Text="App Installer" FontSize="25" FontWeight="SemiBold"/><TextBlock Text="Install and keep your essential tools up to date" Style="{StaticResource Muted}"/></StackPanel>
+   <StackPanel x:Name="HeaderDrag" Grid.Column="1" VerticalAlignment="Center"><StackPanel Orientation="Horizontal" Spacing="10"><TextBlock Text="App Installer" FontSize="25" FontWeight="SemiBold"/><TextBlock x:Name="VersionLabel" VerticalAlignment="Center" Style="{StaticResource Muted}"/></StackPanel><TextBlock Text="Install and keep your essential tools up to date" Style="{StaticResource Muted}"/></StackPanel>
    <Button Grid.Column="2" Content="⚙  Settings" Click="Settings_Click" IsEnabled="{Binding Idle}" VerticalAlignment="Center"/>
    <Button Grid.Column="3" Content="⟳  Refresh" Click="Refresh_Click" IsEnabled="{Binding Idle}" VerticalAlignment="Center"/>
   </Grid>

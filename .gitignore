@@ -8,3 +8,5 @@ artifacts/
 /X-App-Installer-*.zip
 *.log
 
+
+/X-App-Installer-*.zip.sha256

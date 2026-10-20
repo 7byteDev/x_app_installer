@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <AppVersion>1.1.0</AppVersion>
+    <Version>$(AppVersion)</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>$(AppVersion).0</FileVersion>
+    <InformationalVersion>$(AppVersion)</InformationalVersion>
+    <InformationalVersion Condition="'$(SourceRevisionId)' != ''">$(AppVersion)+$(SourceRevisionId)</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+</Project>

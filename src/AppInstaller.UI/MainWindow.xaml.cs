@@ -8,7 +8,7 @@ public sealed partial class MainWindow:Window {
  public MainViewModel ViewModel {get;}
  private bool initialized;
  public MainWindow(){
-  InitializeComponent();AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory,"Assets","XAppInstaller.ico"));ViewModel=new(DispatcherQueue);Root.DataContext=ViewModel;
+  InitializeComponent();VersionLabel.Text=AppVersionInfo.Label;AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory,"Assets","XAppInstaller.ico"));ViewModel=new(DispatcherQueue);Root.DataContext=ViewModel;
   ExtendsContentIntoTitleBar=false; // Windows owns a separate caption row, including DPI-aware caption button space.
   AppWindow.TitleBar.BackgroundColor=Windows.UI.Color.FromArgb(255,13,21,29);
   AppWindow.TitleBar.ForegroundColor=Windows.UI.Color.FromArgb(255,193,210,225);
@@ -61,7 +61,7 @@ public sealed partial class MainWindow:Window {
   var shutdown=Box("Shut down after all applications succeed",s.ShutdownAfterSuccess);
   var saveLogs=Box("Save activity logs to disk",s.SaveLogs);
   var level=new ComboBox{Header="Logging level",ItemsSource=new[]{"DEBUG","INFO","SUCCESS","WARNING","ERROR"},SelectedItem=s.LogLevel,HorizontalAlignment=HorizontalAlignment.Stretch};
-  var panel=new StackPanel{Spacing=12,MinWidth=460};foreach(var child in new UIElement[]{downloads,temp,delete,startup,preview,signatures,restore,shutdown,saveLogs,level})panel.Children.Add(child);
+  var panel=new StackPanel{Spacing=12,MinWidth=460};panel.Children.Add(new TextBlock{Text=AppVersionInfo.Details,IsTextSelectionEnabled=true,TextWrapping=TextWrapping.Wrap});foreach(var child in new UIElement[]{downloads,temp,delete,startup,preview,signatures,restore,shutdown,saveLogs,level})panel.Children.Add(child);
   var dialog=new ContentDialog{XamlRoot=Root.XamlRoot,RequestedTheme=ElementTheme.Dark,Title="Settings",Content=new ScrollViewer{Content=panel,MaxHeight=600},PrimaryButtonText="Save",CloseButtonText="Cancel"};
   if(await dialog.ShowAsync()==ContentDialogResult.Primary){
    if(!Path.IsPathFullyQualified(downloads.Text)||!Path.IsPathFullyQualified(temp.Text)){ViewModel.Operation="Settings not saved: use absolute directory paths.";return;}

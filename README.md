@@ -47,3 +47,7 @@ See `docs/VALIDATION.md` for the exact checks and download evidence. No real ven
 Restore-point creation is not supported in this build and its setting remains disabled. The temporary-directory field is reserved; portable staging stays on the destination volume for atomic publication. Preview release support depends on the upstream feed. Detection checks registry, runtime environment, managed installations, configured overrides and a shared common-folder index. The index is bounded to two seconds, 2,500 directory entries and depth three, skips junctions and network drives, and checks conventional folders on fixed drives. Portable candidates are inspected through files/version metadata; discovery does not execute them. A full disk scan is intentionally avoided. External MCP registration, model downloads, accounts/licenses and Windows feature setup remain vendor/user actions.
 
 See `docs/DEPENDENCY-AUDIT.md`, `docs/SOURCES.md`, `docs/ARCHITECTURE.md` and `catalog/apps.schema.json`.
+
+## Versioning and local Git history
+
+The current release version is maintained in `Version.props`. Run `Build.ps1` to build, check and create a versioned release ZIP. `Launch.cmd` starts the latest built release. See [docs/VERSION-CONTROL.md](docs/VERSION-CONTROL.md) for version increments, Git history, release tags and backups. Release notes are in [CHANGELOG.md](CHANGELOG.md).
