@@ -1134,5 +1134,56 @@
       "rustdesk*"
     ],
     "DiscoveryExecutable": "rustdesk.exe"
+  },
+  {
+    "Id": "iptvnator",
+    "Name": "IPTVnator",
+    "Categories": [
+      "Multimedia"
+    ],
+    "Glyph": "TV",
+    "Color": "#8474EA",
+    "Homepage": "https://4gray.github.io/iptvnator/",
+    "Description": "Open source IPTV player for M3U/M3U8 playlists and XMLTV programme guides.",
+    "Enabled": true,
+    "Source": "github",
+    "Repository": "4gray/iptvnator",
+    "AssetPattern": "^iptvnator-[0-9.]+-windows-x64-setup\\.exe$",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RegistryPattern": "^IPTVnator(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": false,
+    "DependencyStatus": "Verified",
+    "Dependencies": [],
+    "OptionalDependencies": [
+      {
+        "Id": "mpv",
+        "Reason": "Optional external playback engine"
+      },
+      {
+        "Id": "vlc",
+        "Reason": "Optional external playback engine"
+      }
+    ],
+    "DependencyNotes": "The Windows desktop installer includes its Electron runtime and built-in web playback. MPV and VLC are optional external players, not required to install IPTVnator. Import and configure your playlists in IPTVnator.",
+    "RequirementSources": [
+      "https://github.com/4gray/iptvnator",
+      "https://github.com/4gray/iptvnator/blob/master/electron-builder.json",
+      "https://4gray.github.io/iptvnator/download/"
+    ],
+    "InstallationNotes": "Official unsigned Windows x64 setup; requires the authoritative GitHub release SHA-256. Follow the vendor setup. Optional external players and playlist sources are configured in IPTVnator.",
+    "DiscoveryPatterns": [
+      "IPTVnator*",
+      "iptvnator*",
+      "4gray.IPTVnator*"
+    ],
+    "DiscoveryExecutable": "IPTVnator.exe",
+    "AllowUnsignedWithHash": true
   }
 ]

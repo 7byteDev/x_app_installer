@@ -39,3 +39,5 @@ REA uses its official website favicon, including its original R design. Java use
 - obs: https://obsproject.com/assets/images/new_icon_small-r.png
 
 - rustdesk: https://raw.githubusercontent.com/rustdesk/rustdesk/master/res/128x128.png
+
+- iptvnator: https://raw.githubusercontent.com/4gray/iptvnator/master/apps/web/src/assets/icons/icon.png

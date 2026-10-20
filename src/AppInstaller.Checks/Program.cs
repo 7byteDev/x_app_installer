@@ -36,12 +36,12 @@ Check(resolver.Resolve(["a"],graph,new Dictionary<string,string?>{{"b","2.1"},{"
 Check(resolver.Resolve(["a"],graph,new Dictionary<string,string?>{{"b","1.0"}}).Count==3,"Incompatible dependency upgraded");
 try{resolver.Resolve(["a"],[Def("a",new Dependency("b")),Def("b",new Dependency("a"))],empty);throw new Exception("Cycle accepted");}catch(InvalidOperationException){Check(true,"Circular dependency rejected");}
 try{resolver.Resolve(["a"],[Def("a",new Dependency("missing"))],empty);throw new Exception("Missing dependency accepted");}catch(InvalidOperationException){Check(true,"Unknown dependency rejected");}
-Check(catalog.Count==29&&catalog.Count(a=>a.Enabled)==29,"29 catalog entries, all enabled");
+Check(catalog.Count==30&&catalog.Count(a=>a.Enabled)==30,"30 catalog entries, all enabled");
 Check(Versions.AtLeast("7-Zip 26.04 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-10-05","26.04"),"7-Zip product-name digit does not mask its version");
 Check(!Versions.AtLeast("7-Zip 26.00 (x64)","26.04"),"Older 7-Zip version is rejected");
 Check(Versions.AtLeast("openjdk 27 2026-09-15","27.0.0"),"Java feature-only version output is recognized");
 Check(Versions.AtLeast("2.50.1.windows.1","2.49.0"),"Git version normalization");
-Check(catalog.All(a=>a.DependencyStatus=="Verified"&&a.RequirementSources.Length>0),"All 29 dependency definitions have audit sources");
+Check(catalog.All(a=>a.DependencyStatus=="Verified"&&a.RequirementSources.Length>0),"All 30 dependency definitions have audit sources");
 var reaOrder=resolver.Resolve(["rea"],catalog,empty);
 var reaIds=reaOrder.Select(a=>a.Id).ToArray();
 Check(reaIds.Contains("node")&&reaIds.Contains("java")&&reaIds.Contains("ghidra")&&reaIds.Last()=="rea","REA includes Node, Java and Ghidra");

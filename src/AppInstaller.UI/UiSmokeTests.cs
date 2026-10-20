@@ -43,6 +43,6 @@ internal static class UiSmokeTests {
   Check(vm.Dependencies.Contains("Java")&&vm.Dependencies.Contains("Ghidra")&&vm.Dependencies.Contains("12.2"),"REA details show required apps and version limits");
   vm.Filter("AI & LLM");Check(vm.FilteredApps.Count==5,"Category filtering works");
   vm.Filter("All Apps","node");Check(vm.FilteredApps.Count==1,"Search works");vm.Filter("All Apps");
-  Check(vm.Apps.All(a=>a.Release is not null),"All 29 release sources loaded");vm.SelectedApp=vm.Apps.First();return checks;
+  Check(vm.Apps.All(a=>a.Release is not null),"All 30 release sources loaded");vm.SelectedApp=vm.Apps.First();return checks;
  }
 }

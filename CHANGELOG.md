@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 — 2026-10-20
+
+- Added IPTVnator under Multimedia with an official Windows x64 provider, local logo and installed-app detection.
+- Documented MPV and VLC as optional playback engines.
+
 ## 1.1.0 — 2026-10-20
 
 - Added local Git version control and release tags.
