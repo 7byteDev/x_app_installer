@@ -1,6 +1,6 @@
 # Versioning and local source control
 
-The project uses a local Git repository on branch `main`. No remote is configured and nothing is uploaded. Source, catalog, scripts, documentation and assets are tracked; generated binaries and ZIPs are excluded.
+The project uses Git on branch `main`, with `origin` pointing to https://github.com/7byteDev/x_app_installer. Source, catalog, scripts, documentation and assets are tracked; generated binaries and ZIPs are excluded.
 
 `v1.0.0` preserves the previous application. `v1.1.0` introduces version control. Initial commits use `Codex <codex@localhost>` as a local automation identity; no global Git identity was changed. Configure your own name and email before making personal commits.
 
