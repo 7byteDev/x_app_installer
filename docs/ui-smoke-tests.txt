@@ -1,0 +1,11 @@
+Only eligible applications can be selected
+Deselect All clears selection
+Java can be selected directly
+Selecting REA adds Node, Java and Ghidra
+Required dependencies are locked against deselection
+A required Java dependency is reselected if changed programmatically
+Deselecting REA releases its automatic prerequisites
+REA details show required apps and version limits
+Category filtering works
+Search works
+All 29 release sources loaded

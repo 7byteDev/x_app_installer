@@ -1,0 +1,336 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "X App Installer catalog",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "Id",
+      "Name",
+      "Categories"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "Id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "Name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "Categories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1
+      },
+      "Description": {
+        "type": "string"
+      },
+      "Glyph": {
+        "type": "string"
+      },
+      "Color": {
+        "type": "string",
+        "pattern": "^#[0-9a-fA-F]{6}$"
+      },
+      "Homepage": {
+        "type": "string"
+      },
+      "Source": {
+        "type": "string",
+        "enum": [
+          "node",
+          "github",
+          "adoptium",
+          "python",
+          "hermes",
+          "redirect",
+          "npm",
+          "docker",
+          "ffmpeg",
+          "vscode",
+          "winscp",
+          "putty",
+          "portscanner",
+          "wireshark",
+          "binary-metadata",
+          "portmaster",
+          "vlc",
+          "mpv-windows"
+        ]
+      },
+      "Repository": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "AssetPattern": {
+        "type": "string"
+      },
+      "InstallerType": {
+        "enum": [
+          "msi",
+          "exe",
+          "zip",
+          "npm",
+          "7z"
+        ]
+      },
+      "SilentArguments": {
+        "type": "string"
+      },
+      "RegistryPattern": {
+        "type": "string"
+      },
+      "Architectures": {
+        "type": "array",
+        "items": {
+          "enum": [
+            "x64",
+            "arm64",
+            "x86"
+          ]
+        }
+      },
+      "Dependencies": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "Id"
+          ],
+          "properties": {
+            "Id": {
+              "type": "string"
+            },
+            "MinimumVersion": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "MaximumVersionExclusive": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "Reason": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "DownloadHosts": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "Publisher": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "UnavailableReason": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "Enabled": {
+        "type": "boolean"
+      },
+      "RequireSignature": {
+        "type": "boolean"
+      },
+      "AllowUnsignedWithHash": {
+        "type": "boolean"
+      },
+      "RequiresAdministrator": {
+        "type": "boolean"
+      },
+      "VerificationCommands": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "FilePath",
+            "Arguments"
+          ],
+          "properties": {
+            "FilePath": {
+              "type": "string"
+            },
+            "Arguments": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "CompareVersion": {
+              "type": "boolean"
+            },
+            "RelativePath": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "OptionalDependencies": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "Id"
+          ],
+          "properties": {
+            "Id": {
+              "type": "string"
+            },
+            "MinimumVersion": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "MaximumVersionExclusive": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "Reason": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "DependencyStatus": {
+        "type": "string"
+      },
+      "DependencyNotes": {
+        "type": "string"
+      },
+      "InstallationNotes": {
+        "type": "string"
+      },
+      "MinimumVersion": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "MaximumVersionExclusive": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "FeedUrl": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "PortableExecutable": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "EnvironmentVariable": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "DetectionVersionPattern": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "RequirementSources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "DetectionFiles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "Interactive": {
+        "type": "boolean"
+      },
+      "PackageName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "PackageEntryPoint": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "PortableVersionFile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "PortableVersionPattern": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "PathSubdirectory": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "PortableVersionArguments": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "DiscoveryPatterns": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "DiscoveryExecutable": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1138 @@
+[
+  {
+    "Id": "node",
+    "Name": "Node.js",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "JS",
+    "Color": "#78B94B",
+    "Homepage": "https://nodejs.org",
+    "Description": "JavaScript runtime built on Chrome’s V8 engine.",
+    "Enabled": true,
+    "Source": "node",
+    "InstallerType": "msi",
+    "SilentArguments": "/qn /norestart",
+    "RegistryPattern": "^Node\\.js$",
+    "DownloadHosts": [
+      "nodejs.org"
+    ],
+    "Publisher": "OpenJS Foundation",
+    "RequireSignature": true,
+    "VerificationCommands": [
+      {
+        "FilePath": "%ProgramFiles%\\nodejs\\node.exe",
+        "Arguments": [
+          "--version"
+        ],
+        "CompareVersion": true,
+        "RelativePath": "node.exe"
+      },
+      {
+        "FilePath": "%ProgramFiles%\\nodejs\\node.exe",
+        "Arguments": [
+          "{ExecutableDirectory}\\node_modules\\npm\\bin\\npm-cli.js",
+          "--version"
+        ],
+        "RelativePath": "node.exe"
+      }
+    ],
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separately installed application from this catalog is required. Installer includes its runtime components.",
+    "RequirementSources": [
+      "https://nodejs.org/en/download"
+    ],
+    "InstallationNotes": "Uses documented vendor installation defaults.",
+    "DiscoveryPatterns": [
+      "node*",
+      "OpenJS.NodeJS*"
+    ],
+    "DiscoveryExecutable": "node.exe"
+  },
+  {
+    "Id": "git",
+    "Name": "Git",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "◆",
+    "Color": "#F4664A",
+    "Homepage": "https://gitforwindows.org",
+    "Description": "Distributed version control with Git Bash.",
+    "Enabled": true,
+    "Source": "github",
+    "Repository": "git-for-windows/git",
+    "AssetPattern": "^Git-[\\d.]+-64-bit\\.exe$",
+    "SilentArguments": "/VERYSILENT /NORESTART /NOCANCEL /SP-",
+    "RegistryPattern": "^Git( version.*)?$",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "Publisher": "Johannes Schindelin",
+    "RequireSignature": true,
+    "VerificationCommands": [
+      {
+        "FilePath": "%ProgramFiles%\\Git\\cmd\\git.exe",
+        "Arguments": [
+          "--version"
+        ],
+        "CompareVersion": true,
+        "RelativePath": "cmd/git.exe"
+      }
+    ],
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separately installed application from this catalog is required. Installer includes its runtime components.",
+    "RequirementSources": [
+      "https://gitforwindows.org/silent-or-unattended-installation"
+    ],
+    "InstallationNotes": "Uses documented vendor installation defaults.",
+    "DiscoveryPatterns": [
+      "Git",
+      "PortableGit*",
+      "Git.Git*"
+    ],
+    "DiscoveryExecutable": "cmd/git.exe"
+  },
+  {
+    "Id": "java",
+    "Name": "Java (JDK)",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "♨",
+    "Color": "#E99850",
+    "Homepage": "https://adoptium.net",
+    "Description": "OpenJDK runtime and development tools.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separately installed application from this catalog is required. Installer includes its runtime components.",
+    "RequirementSources": [
+      "https://adoptium.net/installation/windows/"
+    ],
+    "InstallationNotes": "Machine-wide Temurin JDK; vendor INSTALLLEVEL=1 configures PATH. JAVA_HOME is not overwritten.",
+    "Source": "adoptium",
+    "InstallerType": "msi",
+    "SilentArguments": "/qn /norestart INSTALLLEVEL=1",
+    "RegistryPattern": "^(?:Eclipse Temurin.*JDK|Java.*Development Kit|OpenJDK.*|Microsoft Build of OpenJDK).*",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "Publisher": "Eclipse Foundation",
+    "VerificationCommands": [
+      {
+        "FilePath": "%ProgramFiles%\\Eclipse Adoptium\\jdk-*\\bin\\java.exe",
+        "Arguments": [
+          "--version"
+        ],
+        "CompareVersion": true,
+        "RelativePath": "bin/java.exe"
+      },
+      {
+        "FilePath": "%ProgramFiles%\\Eclipse Adoptium\\jdk-*\\bin\\javac.exe",
+        "Arguments": [
+          "--version"
+        ],
+        "CompareVersion": true,
+        "RelativePath": "bin/javac.exe"
+      }
+    ],
+    "DiscoveryPatterns": [
+      "java",
+      "jdk*",
+      "openjdk*",
+      "temurin*",
+      "Eclipse Adoptium",
+      "zulu*",
+      "corretto*",
+      "Microsoft"
+    ],
+    "DiscoveryExecutable": "bin/java.exe"
+  },
+  {
+    "Id": "python",
+    "Name": "Python",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "Py",
+    "Color": "#E6C759",
+    "Homepage": "https://www.python.org",
+    "Description": "Python language and package ecosystem.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separately installed application from this catalog is required. Installer includes its runtime components.",
+    "RequirementSources": [
+      "https://docs.python.org/3/using/windows.html",
+      "https://www.python.org/downloads/windows/"
+    ],
+    "InstallationNotes": "Official Windows x64 full installer; installs for all users and adds Python to PATH.",
+    "Source": "python",
+    "InstallerType": "exe",
+    "SilentArguments": "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0",
+    "RegistryPattern": "^Python \\d+\\.\\d+(?:\\.\\d+)? \\(64-bit\\)$",
+    "DownloadHosts": [
+      "www.python.org",
+      "python.org"
+    ],
+    "RequireSignature": true,
+    "Publisher": "Python Software Foundation",
+    "VerificationCommands": [
+      {
+        "FilePath": "%ProgramFiles%\\Python*\\python.exe",
+        "Arguments": [
+          "--version"
+        ],
+        "CompareVersion": true,
+        "RelativePath": "python.exe"
+      }
+    ],
+    "DiscoveryPatterns": [
+      "Python*"
+    ],
+    "DiscoveryExecutable": "python.exe"
+  },
+  {
+    "Id": "hermes",
+    "Name": "Hermes Agent Desktop",
+    "Categories": [
+      "AI & LLM"
+    ],
+    "Glyph": "H",
+    "Color": "#ADB5C5",
+    "Homepage": "https://hermes-agent.nousresearch.com/docs/user-guide/desktop",
+    "Description": "Desktop interface for Hermes Agent.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Official desktop bootstrap manages its own Git, Python, Node.js, npm and other runtime dependencies. They are not separate system-app prerequisites. Optional integrations may need extra tools.",
+    "RequirementSources": [
+      "https://hermes-agent.nousresearch.com/desktop",
+      "https://hermes-agent.nousresearch.com/docs/user-guide/windows-native"
+    ],
+    "InstallationNotes": "Signed official desktop bootstrap. Follow the vendor setup window; it prepares its managed runtime and builds Desktop. Network access is required.",
+    "Source": "hermes",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RequireSignature": true,
+    "Publisher": "Nous Research",
+    "DownloadHosts": [
+      "hermes-assets.nousresearch.com"
+    ],
+    "Repository": "NousResearch/hermes-agent",
+    "RegistryPattern": "^Hermes(?: Agent)?(?: Desktop)?$",
+    "DiscoveryPatterns": [
+      "Hermes*"
+    ],
+    "DiscoveryExecutable": "Hermes.exe"
+  },
+  {
+    "Id": "lmstudio",
+    "Name": "LM Studio",
+    "Categories": [
+      "AI & LLM"
+    ],
+    "Glyph": "≋",
+    "Color": "#A177FF",
+    "Homepage": "https://lmstudio.ai",
+    "Description": "Discover and run local language models.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separate Node.js, Python, Java or Docker installation is required. Local inference depends on supported CPU/GPU and available RAM; model downloads are separate.",
+    "RequirementSources": [
+      "https://lmstudio.ai/download",
+      "https://lmstudio.ai/docs/app/system-requirements"
+    ],
+    "InstallationNotes": "Official signed installer. Follow the vendor setup window; no undocumented silent switches are used.",
+    "Source": "redirect",
+    "FeedUrl": "https://lmstudio.ai/download/latest/win32/x64",
+    "AssetPattern": "LM-Studio-([0-9.]+(?:-[0-9]+)?)-x64\\.exe",
+    "RegistryPattern": "^LM Studio(?: [0-9].*)?$",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RequireSignature": true,
+    "Publisher": "Element Labs",
+    "DownloadHosts": [
+      "lmstudio.ai",
+      "installers.lmstudio.ai"
+    ],
+    "DiscoveryPatterns": [
+      "LM Studio*",
+      "LM-Studio*",
+      "ElementLabs.LMStudio*"
+    ],
+    "DiscoveryExecutable": "LM Studio.exe"
+  },
+  {
+    "Id": "bionic",
+    "Name": "LM Studio Bionic",
+    "Categories": [
+      "AI & LLM"
+    ],
+    "Glyph": "⬡",
+    "Color": "#9861E9",
+    "Homepage": "https://lmstudio.ai/download?os=windows",
+    "Description": "LM Studio Bionic desktop application; listed on the official LM Studio download page.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Runs its own local models, cloud models or remote models. A separate LM Studio installation is not required. Local models need suitable hardware and a model download.",
+    "RequirementSources": [
+      "https://lmstudio.ai/download",
+      "https://lmstudio.ai/docs/bionic/models"
+    ],
+    "InstallationNotes": "Official signed installer. Follow the vendor setup window; no undocumented silent switches are used.",
+    "Source": "redirect",
+    "FeedUrl": "https://lmstudio.ai/download/bionic/latest/win32/x64",
+    "AssetPattern": "Bionic-([0-9.]+(?:-[0-9]+)?)-x64\\.exe",
+    "RegistryPattern": "^(?:LM Studio )?Bionic(?: [0-9].*)?$",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RequireSignature": true,
+    "Publisher": "Element Labs",
+    "DownloadHosts": [
+      "lmstudio.ai",
+      "bionic-installers.lmstudio.ai"
+    ],
+    "DiscoveryPatterns": [
+      "Bionic*",
+      "LM Studio Bionic*"
+    ],
+    "DiscoveryExecutable": "Bionic.exe"
+  },
+  {
+    "Id": "rea",
+    "Name": "REA MCP Server",
+    "Categories": [
+      "AI & LLM"
+    ],
+    "Glyph": "R",
+    "Color": "#9DC0D8",
+    "Homepage": "https://github.com/morluto/rea",
+    "Description": "Reverse Engineer Anything CLI and MCP server with the Windows Ghidra backend.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Installs REA with its Windows Ghidra backend: Node.js, Ghidra and a compatible full JDK. MCP client registration remains a separate reviewed setup step. Other REA analysis modes can have different prerequisites.",
+    "RequirementSources": [
+      "https://github.com/morluto/rea/blob/main/docs/installation.md",
+      "https://registry.npmjs.org/rea-agents/latest"
+    ],
+    "InstallationNotes": "Verified npm tarball; global npm installation for the current user. Does not modify agent/MCP configuration automatically.",
+    "Source": "npm",
+    "Repository": "morluto/rea",
+    "InstallerType": "npm",
+    "RequiresAdministrator": false,
+    "DownloadHosts": [
+      "registry.npmjs.org"
+    ],
+    "Dependencies": [
+      {
+        "Id": "node",
+        "MinimumVersion": "26.0",
+        "Reason": "REA package runtime; conservative supported Node.js 26+ range."
+      },
+      {
+        "Id": "java",
+        "MinimumVersion": "21.0",
+        "Reason": "Full 64-bit JDK for the Ghidra backend."
+      },
+      {
+        "Id": "ghidra",
+        "MinimumVersion": "12.1",
+        "MaximumVersionExclusive": "12.2",
+        "Reason": "REA Windows Ghidra backend supports the 12.1 release series."
+      }
+    ],
+    "PackageName": "rea-agents",
+    "PackageEntryPoint": "scripts/rea.mjs"
+  },
+  {
+    "Id": "ghidra",
+    "Name": "Ghidra",
+    "Categories": [
+      "Reverse Engineering"
+    ],
+    "Glyph": "G",
+    "Color": "#F17558",
+    "Homepage": "https://github.com/NationalSecurityAgency/ghidra",
+    "Description": "Software reverse engineering framework.",
+    "Dependencies": [
+      {
+        "Id": "java",
+        "MinimumVersion": "21.0",
+        "Reason": "Full JDK; refreshed from the selected release application.properties."
+      }
+    ],
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Java is required. Its version range is read from the selected Ghidra release. Python is optional for PyGhidra/debugger workflows; a newer unsupported Python is not substituted.",
+    "RequirementSources": [
+      "https://github.com/NationalSecurityAgency/ghidra/blob/Ghidra_12.1.4_build/Ghidra/application.properties",
+      "https://github.com/NationalSecurityAgency/ghidra/blob/Ghidra_12.1.4_build/GhidraDocs/GettingStarted.md"
+    ],
+    "InstallationNotes": "Versioned portable installation for the current user. Sets GHIDRA_INSTALL_DIR; preserves existing installations.",
+    "Source": "github",
+    "Repository": "NationalSecurityAgency/ghidra",
+    "AssetPattern": "^ghidra_[0-9.]+_PUBLIC_.*\\.zip$",
+    "InstallerType": "zip",
+    "RequiresAdministrator": false,
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "PortableExecutable": "ghidraRun.bat",
+    "EnvironmentVariable": "GHIDRA_INSTALL_DIR",
+    "OptionalDependencies": [
+      {
+        "Id": "python",
+        "MinimumVersion": "3.9",
+        "MaximumVersionExclusive": "3.15",
+        "Reason": "PyGhidra and debugger workflows; release-specific Python support applies."
+      }
+    ],
+    "PortableVersionFile": "Ghidra/application.properties",
+    "PortableVersionPattern": "(?m)^application.version=(\\d+(?:\\.\\d+)+)",
+    "DiscoveryPatterns": [
+      "ghidra*"
+    ]
+  },
+  {
+    "Id": "docker",
+    "Name": "Docker Desktop",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "▦",
+    "Color": "#32B3FF",
+    "Homepage": "https://www.docker.com/products/docker-desktop/",
+    "Description": "Container development environment.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Requires a supported Windows edition/build, hardware virtualization and the WSL 2 or Hyper-V backend. These Windows features are checked before installation; they are not Java/Python/Node catalog dependencies. Docker license acceptance remains with the user.",
+    "RequirementSources": [
+      "https://docs.docker.com/desktop/setup/install/windows-install/"
+    ],
+    "InstallationNotes": "Documented quiet installer with Linux containers. Missing Windows prerequisites are reported; no automatic feature enabling or license acceptance.",
+    "Source": "docker",
+    "InstallerType": "exe",
+    "SilentArguments": "install --quiet --backend=wsl-2 --no-windows-containers",
+    "RequireSignature": true,
+    "Publisher": "Docker Inc",
+    "DownloadHosts": [
+      "desktop.docker.com"
+    ],
+    "RegistryPattern": "^Docker Desktop$"
+  },
+  {
+    "Id": "ffmpeg",
+    "Name": "FFmpeg",
+    "Categories": [
+      "Multimedia"
+    ],
+    "Glyph": "F",
+    "Color": "#69C644",
+    "Homepage": "https://ffmpeg.org/download.html",
+    "Description": "Audio and video processing toolkit.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Gyan essentials builds are linked by FFmpeg upstream and include their codec libraries. No separate Python, Node.js or Java is required.",
+    "RequirementSources": [
+      "https://ffmpeg.org/download.html",
+      "https://www.gyan.dev/ffmpeg/builds/"
+    ],
+    "InstallationNotes": "Verified Gyan stable essentials ZIP; versioned current-user installation; adds its bin directory to User PATH without duplicate entries.",
+    "Source": "ffmpeg",
+    "InstallerType": "zip",
+    "RequiresAdministrator": false,
+    "DownloadHosts": [
+      "www.gyan.dev",
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "PortableExecutable": "bin/ffmpeg.exe",
+    "PortableVersionArguments": [
+      "-version"
+    ],
+    "PortableVersionPattern": "ffmpeg version (\\d+(?:\\.\\d+)+)",
+    "PathSubdirectory": "bin",
+    "DiscoveryPatterns": [
+      "ffmpeg*",
+      "Gyan.FFmpeg*"
+    ]
+  },
+  {
+    "Id": "7zip",
+    "Name": "7-Zip",
+    "Categories": [
+      "Compression"
+    ],
+    "Glyph": "7z",
+    "Color": "#F0F3F8",
+    "Homepage": "https://www.7-zip.org",
+    "Description": "Open-source archiver with high compression ratios.",
+    "Enabled": true,
+    "Source": "github",
+    "Repository": "ip7z/7zip",
+    "AssetPattern": "^7z[\\d]+-x64\\.exe$",
+    "SilentArguments": "/S",
+    "RegistryPattern": "^7-Zip.*\\(x64\\)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "AllowUnsignedWithHash": true,
+    "VerificationCommands": [
+      {
+        "FilePath": "%ProgramFiles%\\7-Zip\\7z.exe",
+        "Arguments": [],
+        "CompareVersion": true,
+        "RelativePath": "7z.exe"
+      }
+    ],
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separately installed application from this catalog is required. Installer includes its runtime components.",
+    "RequirementSources": [
+      "https://www.7-zip.org/faq.html"
+    ],
+    "InstallationNotes": "Uses documented vendor installation defaults.",
+    "DiscoveryPatterns": [
+      "7-Zip*",
+      "7zip*",
+      "7z*"
+    ],
+    "DiscoveryExecutable": "7z.exe"
+  },
+  {
+    "Id": "vscode",
+    "Name": "Visual Studio Code",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "〈〉",
+    "Color": "#25ABF2",
+    "Homepage": "https://code.visualstudio.com",
+    "Description": "Code editor with debugging and extensions.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Standalone editor. Language runtimes and Git are optional for the corresponding development features.",
+    "RequirementSources": [
+      "https://code.visualstudio.com/docs/setup/windows",
+      "https://code.visualstudio.com/docs/supporting/requirements"
+    ],
+    "InstallationNotes": "Official system installer. Follow the vendor setup window to choose PATH and context-menu options.",
+    "Source": "vscode",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequireSignature": true,
+    "Publisher": "Microsoft Corporation",
+    "DownloadHosts": [
+      "vscode.download.prss.microsoft.com",
+      "az764295.vo.msecnd.net",
+      "download.visualstudio.microsoft.com"
+    ],
+    "RegistryPattern": "^Microsoft Visual Studio Code(?: \\(User\\))?$",
+    "OptionalDependencies": [
+      {
+        "Id": "git",
+        "Reason": "Source-control features"
+      },
+      {
+        "Id": "node",
+        "Reason": "JavaScript/Node.js development"
+      },
+      {
+        "Id": "python",
+        "Reason": "Python development"
+      }
+    ],
+    "DiscoveryPatterns": [
+      "VSCode*",
+      "Microsoft VS Code",
+      "Code",
+      "Microsoft.VisualStudioCode*"
+    ],
+    "DiscoveryExecutable": "Code.exe"
+  },
+  {
+    "Id": "notepad",
+    "Name": "Notepad++",
+    "Categories": [
+      "Productivity"
+    ],
+    "Glyph": "N+",
+    "Color": "#B1D877",
+    "Homepage": "https://notepad-plus-plus.org",
+    "Description": "Lightweight source code editor.",
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "No separately installed application from this catalog is required. Installer includes its runtime components.",
+    "RequirementSources": [
+      "https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/PowerEditor/installer/nppSetup.nsi"
+    ],
+    "InstallationNotes": "Official NSIS silent installer (/S). Close running Notepad++ windows before installing.",
+    "Source": "github",
+    "Repository": "notepad-plus-plus/notepad-plus-plus",
+    "AssetPattern": "^npp\\.[0-9.]+\\.Installer\\.x64\\.exe$",
+    "InstallerType": "exe",
+    "SilentArguments": "/S",
+    "RegistryPattern": "^Notepad\\+\\+(?: \\(64-bit x64\\))?$",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "Publisher": "Notepad",
+    "DiscoveryPatterns": [
+      "npp*",
+      "Notepad++*"
+    ],
+    "DiscoveryExecutable": "notepad++.exe"
+  },
+  {
+    "Id": "winscp",
+    "Name": "WinSCP",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "Wi",
+    "Color": "#56BDEB",
+    "Homepage": "https://winscp.net/eng/download.php",
+    "Description": "SFTP, SCP, FTP and WebDAV file transfer client.",
+    "Enabled": true,
+    "Source": "winscp",
+    "InstallerType": "exe",
+    "Interactive": false,
+    "RegistryPattern": "^WinSCP(?:\\s|$)",
+    "DownloadHosts": [
+      "winscp.net",
+      "cdn.winscp.net"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Standalone client; no separately installed catalog applications required.",
+    "RequirementSources": [
+      "https://winscp.net/eng/docs/installation"
+    ],
+    "InstallationNotes": "Official Inno Setup installer; installs for all users.",
+    "DiscoveryPatterns": [
+      "WinSCP*",
+      "winscp*"
+    ],
+    "DiscoveryExecutable": "WinSCP.exe",
+    "SilentArguments": "/VERYSILENT /ALLUSERS /SUPPRESSMSGBOXES /NORESTART"
+  },
+  {
+    "Id": "putty",
+    "Name": "PuTTY",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "Pu",
+    "Color": "#56BDEB",
+    "Homepage": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+    "Description": "SSH, Telnet and serial terminal client.",
+    "Enabled": true,
+    "Source": "putty",
+    "InstallerType": "msi",
+    "Interactive": false,
+    "RegistryPattern": "^PuTTY(?:\\s|$)",
+    "DownloadHosts": [
+      "the.earth.li"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Standalone terminal client. The MSI includes PuTTY utilities.",
+    "RequirementSources": [
+      "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html"
+    ],
+    "InstallationNotes": "Official Windows installer. Complete the vendor setup window.",
+    "DiscoveryPatterns": [
+      "PuTTY*",
+      "putty*"
+    ],
+    "DiscoveryExecutable": "putty.exe",
+    "SilentArguments": "/qn /norestart"
+  },
+  {
+    "Id": "portscanner",
+    "Name": "Advanced Port Scanner",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "Ad",
+    "Color": "#56BDEB",
+    "Homepage": "https://www.advanced-port-scanner.com/",
+    "Description": "Discover network devices, open ports and services.",
+    "Enabled": true,
+    "Source": "portscanner",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RegistryPattern": "^Advanced Port Scanner(?:\\s|$)",
+    "DownloadHosts": [
+      "download.advanced-port-scanner.com"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Standalone scanner; no separately installed catalog application required.",
+    "RequirementSources": [
+      "https://www.advanced-port-scanner.com/"
+    ],
+    "InstallationNotes": "Official Windows installer. Complete the vendor setup window.",
+    "DiscoveryPatterns": [
+      "Advanced Port Scanner*",
+      "portscanner*"
+    ],
+    "DiscoveryExecutable": "advanced_port_scanner.exe"
+  },
+  {
+    "Id": "wireshark",
+    "Name": "Wireshark",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "Wi",
+    "Color": "#56BDEB",
+    "Homepage": "https://www.wireshark.org/download.html",
+    "Description": "Network packet capture and protocol analysis.",
+    "Enabled": true,
+    "Source": "wireshark",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RegistryPattern": "^Wireshark(?:\\s|$)",
+    "DownloadHosts": [
+      "www.wireshark.org",
+      "1.eu.dl.wireshark.org",
+      "2.eu.dl.wireshark.org",
+      "1.na.dl.wireshark.org",
+      "2.na.dl.wireshark.org"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Live capture requires Npcap. The interactive official installer includes Npcap; saved capture files can be opened without it.",
+    "RequirementSources": [
+      "https://www.wireshark.org/docs/wsug_html_chunked/ChBuildInstallWinInstall.html"
+    ],
+    "InstallationNotes": "Interactive setup includes the Npcap driver. A silent Wireshark installation would omit that driver.",
+    "DiscoveryPatterns": [
+      "Wireshark*",
+      "wireshark*"
+    ],
+    "DiscoveryExecutable": "Wireshark.exe"
+  },
+  {
+    "Id": "dbeaver",
+    "Name": "DBeaver Community",
+    "Categories": [
+      "Development"
+    ],
+    "Glyph": "DB",
+    "Color": "#56BDEB",
+    "Homepage": "https://dbeaver.io/download/",
+    "Description": "Database manager and SQL editor.",
+    "Enabled": true,
+    "Source": "github",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RegistryPattern": "^DBeaver(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "The official Windows installer includes its own Java runtime; no system JDK is required. Database-specific JDBC drivers are downloaded when connecting.",
+    "RequirementSources": [
+      "https://dbeaver.io/download/",
+      "https://dbeaver.com/docs/dbeaver/Installation/"
+    ],
+    "InstallationNotes": "Official Windows installer. Complete the vendor setup window.",
+    "DiscoveryPatterns": [
+      "DBeaver Community*",
+      "dbeaver*"
+    ],
+    "DiscoveryExecutable": "dbeaver.exe",
+    "Repository": "dbeaver/dbeaver",
+    "AssetPattern": "^dbeaver-ce-[0-9.]+-windows-x86_64\\.exe$"
+  },
+  {
+    "Id": "flameshot",
+    "Name": "Flameshot",
+    "Categories": [
+      "Productivity"
+    ],
+    "Glyph": "Fl",
+    "Color": "#56BDEB",
+    "Homepage": "https://flameshot.org/docs/installation/installation-windows/",
+    "Description": "Screenshot capture and annotation.",
+    "Enabled": true,
+    "Source": "github",
+    "InstallerType": "msi",
+    "Interactive": false,
+    "RegistryPattern": "^Flameshot(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": false,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Official Windows package contains the required application runtime libraries. No separate catalog application is required.",
+    "RequirementSources": [
+      "https://flameshot.org/docs/installation/installation-windows/"
+    ],
+    "InstallationNotes": "Official Windows installer. Complete the vendor setup window.",
+    "DiscoveryPatterns": [
+      "Flameshot*",
+      "flameshot*"
+    ],
+    "DiscoveryExecutable": "flameshot.exe",
+    "Repository": "flameshot-org/flameshot",
+    "AssetPattern": "^Flameshot-[0-9.]+-win64\\.msi$",
+    "SilentArguments": "/qn /norestart",
+    "AllowUnsignedWithHash": true
+  },
+  {
+    "Id": "lightshot",
+    "Name": "Lightshot",
+    "Categories": [
+      "Productivity"
+    ],
+    "Glyph": "Li",
+    "Color": "#56BDEB",
+    "Homepage": "https://app.prntscr.com/en/download.html",
+    "Description": "Lightweight screenshot capture and annotation.",
+    "Enabled": true,
+    "Source": "binary-metadata",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RegistryPattern": "^Lightshot(?:\\s|$)",
+    "DownloadHosts": [
+      "app.prntscr.com"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Standalone Windows installer. Uploading screenshots is an optional feature controlled by the application.",
+    "RequirementSources": [
+      "https://app.prntscr.com/en/download.html"
+    ],
+    "InstallationNotes": "Official Windows installer. Complete the vendor setup window.",
+    "DiscoveryPatterns": [
+      "Lightshot*",
+      "lightshot*"
+    ],
+    "DiscoveryExecutable": "Lightshot.exe",
+    "FeedUrl": "https://app.prntscr.com/build/setup-lightshot.exe",
+    "RequiresAdministrator": false
+  },
+  {
+    "Id": "sharex",
+    "Name": "ShareX",
+    "Categories": [
+      "Productivity"
+    ],
+    "Glyph": "Sh",
+    "Color": "#56BDEB",
+    "Homepage": "https://getsharex.com/",
+    "Description": "Screen capture, recording and productivity tools.",
+    "Enabled": true,
+    "Source": "github",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RegistryPattern": "^ShareX(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": false,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Use the official self-contained x64 setup. Capture/upload and hotkey choices remain under your control; recording components are managed by ShareX.",
+    "RequirementSources": [
+      "https://getsharex.com/",
+      "https://github.com/ShareX/ShareX"
+    ],
+    "InstallationNotes": "Official Windows installer. Complete the vendor setup window.",
+    "DiscoveryPatterns": [
+      "ShareX*",
+      "sharex*"
+    ],
+    "DiscoveryExecutable": "ShareX.exe",
+    "Repository": "ShareX/ShareX",
+    "AssetPattern": "^ShareX-[0-9.]+-setup-x64\\.exe$",
+    "AllowUnsignedWithHash": true
+  },
+  {
+    "Id": "sniffnet",
+    "Name": "Sniffnet",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "Sn",
+    "Color": "#56BDEB",
+    "Homepage": "https://sniffnet.app/download/",
+    "Description": "Visual network traffic monitoring.",
+    "Enabled": true,
+    "Source": "github",
+    "InstallerType": "msi",
+    "Interactive": false,
+    "RegistryPattern": "^Sniffnet(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Requires Npcap with Install Npcap in WinPcap API-compatible Mode enabled. Wireshark setup can install Npcap, but Wireshark itself is not a required application.",
+    "RequirementSources": [
+      "https://github.com/GyulyVGC/sniffnet/wiki/Required-dependencies",
+      "https://sniffnet.app/download/"
+    ],
+    "InstallationNotes": "Install Npcap in WinPcap API-compatible mode first: https://npcap.com/#download. The SDK is only required for building Sniffnet, not for running it.",
+    "DiscoveryPatterns": [
+      "Sniffnet*",
+      "sniffnet*"
+    ],
+    "DiscoveryExecutable": "sniffnet.exe",
+    "Repository": "GyulyVGC/sniffnet",
+    "AssetPattern": "^Sniffnet_Windows_x64\\.msi$",
+    "SilentArguments": "/qn /norestart"
+  },
+  {
+    "Id": "portmaster",
+    "Name": "Portmaster",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "Po",
+    "Color": "#56BDEB",
+    "Homepage": "https://safing.io/download/",
+    "Description": "Monitor and control application network connections.",
+    "Enabled": true,
+    "Source": "portmaster",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RegistryPattern": "^Portmaster(?:\\s|$)",
+    "DownloadHosts": [
+      "updates.safing.io"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "The official setup installs its background service and network filtering components. Additional components can be downloaded by the vendor setup.",
+    "RequirementSources": [
+      "https://safing.io/download/",
+      "https://github.com/safing/portmaster",
+      "https://wiki.safing.io/en/Portmaster/Install/Windows"
+    ],
+    "InstallationNotes": "Interactive vendor setup; review service and network filtering options. X App Installer does not configure firewall rules.",
+    "DiscoveryPatterns": [
+      "Portmaster*",
+      "portmaster*"
+    ],
+    "DiscoveryExecutable": "portmaster.exe"
+  },
+  {
+    "Id": "opencode",
+    "Name": "OpenCode Desktop",
+    "Categories": [
+      "AI & LLM"
+    ],
+    "Glyph": "O",
+    "Color": "#A7BDD1",
+    "Homepage": "https://opencode.ai/download",
+    "Description": "Open source AI coding agent with a native desktop interface.",
+    "Enabled": true,
+    "Source": "github",
+    "Repository": "anomalyco/opencode",
+    "AssetPattern": "^opencode-desktop-win-x64\\.exe$",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RegistryPattern": "^OpenCode(?: Desktop)?(?:\\s+[0-9].*)?$",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "DependencyNotes": "Official desktop setup bundles Electron and the OpenCode CLI; no separate Node.js installation is required. Configure your model provider in OpenCode after installation.",
+    "RequirementSources": [
+      "https://opencode.ai/download",
+      "https://github.com/anomalyco/opencode/blob/dev/packages/desktop/electron-builder.config.ts"
+    ],
+    "InstallationNotes": "Official per-user Windows x64 desktop installer. Follow the vendor setup. Model provider credentials are configured in OpenCode.",
+    "DiscoveryPatterns": [
+      "OpenCode*",
+      "opencode*",
+      "@opencode*"
+    ],
+    "DiscoveryExecutable": "OpenCode.exe"
+  },
+  {
+    "Categories": [
+      "Multimedia"
+    ],
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "Glyph": "Media",
+    "Color": "#C090ED",
+    "Dependencies": [],
+    "Id": "vlc",
+    "Name": "VLC media player",
+    "Homepage": "https://www.videolan.org/vlc/",
+    "Description": "Open source multimedia player for local files, discs and streams.",
+    "Source": "vlc",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RegistryPattern": "^VLC media player(?:\\s|$)",
+    "DownloadHosts": [
+      "download.videolan.org",
+      "videolan.mirror.liquidtelecom.com"
+    ],
+    "RequireSignature": true,
+    "DependencyNotes": "The VideoLAN Windows installer includes its playback codecs. No separate FFmpeg installation is required.",
+    "RequirementSources": [
+      "https://www.videolan.org/vlc/download-windows.html",
+      "https://update.videolan.org/vlc/status-win-x64"
+    ],
+    "InstallationNotes": "Official VideoLAN Windows x64 installer. Review file association choices in the vendor setup.",
+    "DiscoveryPatterns": [
+      "VLC*",
+      "VideoLAN*",
+      "VideoLAN.VLC*"
+    ],
+    "DiscoveryExecutable": "vlc.exe"
+  },
+  {
+    "Categories": [
+      "Multimedia"
+    ],
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "Glyph": "Media",
+    "Color": "#C090ED",
+    "Dependencies": [],
+    "Id": "mpv",
+    "Name": "mpv Player",
+    "Homepage": "https://mpv.io/",
+    "Description": "Lightweight media player. Windows builds by shinchiro, linked by mpv.io.",
+    "Source": "mpv-windows",
+    "InstallerType": "7z",
+    "RequiresAdministrator": false,
+    "Repository": "shinchiro/mpv-winbuild-cmake",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": false,
+    "DependencyNotes": "Uses the standard x86_64 build by shinchiro linked on mpv.io. This is a third-party development build, not an official stable Windows installer. Codec libraries are bundled; a separate FFmpeg or 7-Zip installation is not required.",
+    "RequirementSources": [
+      "https://mpv.io/installation/",
+      "https://github.com/shinchiro/mpv-winbuild-cmake/releases"
+    ],
+    "InstallationNotes": "Portable current-user installation. The displayed release version is the Windows build date (year.month.day). Adds its folder to User PATH; file associations remain unchanged.",
+    "DiscoveryPatterns": [
+      "mpv*",
+      "shinchiro.mpv*"
+    ],
+    "DiscoveryExecutable": "mpv.exe",
+    "PortableExecutable": "mpv.exe",
+    "PortableVersionArguments": [
+      "--version"
+    ],
+    "PortableVersionPattern": "mpv\\s+v?(\\d+(?:\\.\\d+)+)",
+    "PathSubdirectory": "."
+  },
+  {
+    "Categories": [
+      "Multimedia"
+    ],
+    "Enabled": true,
+    "DependencyStatus": "Verified",
+    "Glyph": "Media",
+    "Color": "#C090ED",
+    "Dependencies": [],
+    "Id": "obs",
+    "Name": "OBS Studio",
+    "Homepage": "https://obsproject.com/",
+    "Description": "Open source video recording and live streaming.",
+    "Source": "github",
+    "Repository": "obsproject/obs-studio",
+    "AssetPattern": "^OBS-Studio-[0-9.]+-Windows-x64-Installer\\.exe$",
+    "InstallerType": "exe",
+    "Interactive": true,
+    "RequiresAdministrator": false,
+    "RegistryPattern": "^OBS Studio(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "DependencyNotes": "Official Windows x64 installer manages its runtime requirements. Recording and streaming require compatible graphics hardware and current graphics drivers; no separate FFmpeg installation is required.",
+    "RequirementSources": [
+      "https://obsproject.com/download",
+      "https://obsproject.com/kb/system-requirements"
+    ],
+    "InstallationNotes": "Official OBS Studio installer. Review vendor setup options; streaming accounts and capture permissions are configured in OBS.",
+    "DiscoveryPatterns": [
+      "obs-studio*",
+      "OBS Studio*",
+      "OBSProject.OBSStudio*"
+    ],
+    "DiscoveryExecutable": "bin/64bit/obs64.exe"
+  },
+  {
+    "Id": "rustdesk",
+    "Name": "RustDesk",
+    "Categories": [
+      "Network"
+    ],
+    "Glyph": "RD",
+    "Color": "#38A8F2",
+    "Homepage": "https://rustdesk.com/",
+    "Description": "Open source remote desktop and support client.",
+    "Enabled": true,
+    "Source": "github",
+    "Repository": "rustdesk/rustdesk",
+    "AssetPattern": "^rustdesk-[0-9.]+-x86_64\\.msi$",
+    "InstallerType": "msi",
+    "Interactive": true,
+    "SilentArguments": "/norestart",
+    "RequiresAdministrator": true,
+    "RegistryPattern": "^RustDesk(?:\\s|$)",
+    "DownloadHosts": [
+      "github.com",
+      "release-assets.githubusercontent.com",
+      "objects.githubusercontent.com"
+    ],
+    "RequireSignature": true,
+    "DependencyStatus": "Verified",
+    "Dependencies": [],
+    "DependencyNotes": "Official Windows x64 client installer. No separate Rust toolchain, Docker or self-hosted server is required to install the client. Configure connection and server options in RustDesk.",
+    "RequirementSources": [
+      "https://rustdesk.com/",
+      "https://rustdesk.com/docs/en/client/windows/",
+      "https://github.com/rustdesk/rustdesk/releases"
+    ],
+    "InstallationNotes": "Official MSI with interactive setup. Review the vendor installation and service options. Remote connections and unattended-access settings are configured in RustDesk.",
+    "DiscoveryPatterns": [
+      "RustDesk*",
+      "rustdesk*"
+    ],
+    "DiscoveryExecutable": "rustdesk.exe"
+  }
+]

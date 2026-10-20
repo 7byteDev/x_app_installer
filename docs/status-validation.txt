@@ -1,0 +1,8 @@
+Newer release is yellow and selectable
+Latest installed is green, deselected and disabled
+Current app cannot be manually selected
+Not installed is red and selectable
+Installed version newer than official stays disabled
+Stale release does not imply latest installed
+Unavailable release does not imply latest installed
+Select All excludes current applications

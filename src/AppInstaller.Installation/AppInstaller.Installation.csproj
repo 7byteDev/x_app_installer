@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup></PropertyGroup><ItemGroup><ProjectReference Include="../AppInstaller.Models/AppInstaller.Models.csproj" /><ProjectReference Include="../AppInstaller.Core/AppInstaller.Core.csproj" /></ItemGroup><ItemGroup>
+  <PackageReference Include="SharpCompress" Version="0.50.7" />
+</ItemGroup></Project>

@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWinUI>true</UseWinUI>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>XAppInstaller</AssemblyName>
+    <RootNamespace>AppInstaller.UI</RootNamespace>
+    <ApplicationIcon>Assets\XAppInstaller.ico</ApplicationIcon>
+    <Title>X App Installer</Title>
+    <Product>X App Installer</Product>
+    <Company>Ã–zgÃ¼r Ulusoy</Company>
+    <Authors>Ã–zgÃ¼r Ulusoy</Authors>
+    <Version>1.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Description>Windows application installer and dependency manager. Website: https://7byte.dev</Description>
+    <Copyright>Copyright Â© 2026 Ã–zgÃ¼r Ulusoy</Copyright>
+    <PackageProjectUrl>https://7byte.dev</PackageProjectUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyTitle>X App Installer</AssemblyTitle>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../AppInstaller.Models/AppInstaller.Models.csproj" />
+    <ProjectReference Include="../AppInstaller.Core/AppInstaller.Core.csproj" />
+    <ProjectReference Include="../AppInstaller.Providers/AppInstaller.Providers.csproj" />
+    <ProjectReference Include="../AppInstaller.DependencyResolver/AppInstaller.DependencyResolver.csproj" />
+    <ProjectReference Include="../AppInstaller.Downloads/AppInstaller.Downloads.csproj" />
+    <ProjectReference Include="../AppInstaller.Security/AppInstaller.Security.csproj" />
+    <ProjectReference Include="../AppInstaller.Installation/AppInstaller.Installation.csproj" />
+    <ProjectReference Include="../AppInstaller.Logging/AppInstaller.Logging.csproj" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260921001" />
+    <Content Include="../../catalog/apps.json" Link="catalog/apps.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../docs/SharpCompress-LICENSE.txt" Link="Licenses/SharpCompress-LICENSE.txt" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Assets\XAppInstaller.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Assets\Apps\*" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="Assets\Menu\*.svg" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="CopyApplicationResourcesToPublish" AfterTargets="Publish">
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pri" DestinationFolder="$(PublishDir)" />
+  </Target>
+</Project>

@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AppInstaller.Checks/AppInstaller.Checks.csproj" />
+    <Project Path="src/AppInstaller.Core/AppInstaller.Core.csproj" />
+    <Project Path="src/AppInstaller.DependencyResolver/AppInstaller.DependencyResolver.csproj" />
+    <Project Path="src/AppInstaller.Downloads/AppInstaller.Downloads.csproj" />
+    <Project Path="src/AppInstaller.Installation/AppInstaller.Installation.csproj" />
+    <Project Path="src/AppInstaller.Logging/AppInstaller.Logging.csproj" />
+    <Project Path="src/AppInstaller.Models/AppInstaller.Models.csproj" />
+    <Project Path="src/AppInstaller.Providers/AppInstaller.Providers.csproj" />
+    <Project Path="src/AppInstaller.Security/AppInstaller.Security.csproj" />
+    <Project Path="src/AppInstaller.UI/AppInstaller.UI.csproj" />
+  </Folder>
+</Solution>

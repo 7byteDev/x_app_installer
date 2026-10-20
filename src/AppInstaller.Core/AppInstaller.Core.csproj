@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup></PropertyGroup><ItemGroup><ProjectReference Include="../AppInstaller.Models/AppInstaller.Models.csproj" /></ItemGroup></Project>
